@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="scss/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <span> &lt; </span>
+            <h3>无连接</h3>
+            <p>菜单</p>
+        </header>
+        <section class="section">
+            <div class="menu">
+                <dl>
+                    <dt><img src="images/IMG_09123_03.gif" alt=""></dt>
+                    <dd>电源</dd>
+                </dl>
+                <dl>
+                    <dt><img src="images/IMG_0912_03.gif" alt=""></dt>
+                    <dd>首页</dd>
+                </dl>
+                <dl>
+                    <dt><img src="images/IMG_0912_3_03.gif" alt=""></dt>
+                    <dd>菜单</dd>
+                </dl>
+                <dl>
+                    <dt><img src="images/IMG_12_03.gif" alt=""></dt>
+                    <dd>截屏</dd>
+                </dl>
+            </div>
+            <div class="content">
+                <div class="active">给他人员华图教育 <br>发的规范合格</div>
+                <div>gtfghbtygfhnj </div>
+                <div>vgfhb规划提供会员功能</div>
+                <div>gtgfhyyt还要根juykjuyh据银行卡hjyjuyygh</div>
+            </div>
+        </section>
+        <footer class="footer">
+            <b>任务</b> <input type="text">
+        </footer>
+    </div>
+    <script src="js/flexible.js"></script>
+    <script>
+        const menu = document.querySelector('.menu');
+        const dls = [...menu.children];
+        const di = [...document.querySelectorAll('.content div')];
+        dls.forEach((item, index) => {
+            item.onclick = function() {
+                console.log(111);
+                di.forEach((ite) => {
+                    ite.classList.remove('active');
+                })
+                di[index].classList.add('active');
+            }
+
+        })
+    </script>
+</body>
+
+</html>
